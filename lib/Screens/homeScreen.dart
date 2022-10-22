@@ -1,3 +1,4 @@
+import 'package:doctorx/ui_widget/homeScreenWidgets.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,10 +14,23 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
         child: Scaffold(
       backgroundColor: Colors.white,
-      drawer: Drawer(),
+      drawer: myDrawer(),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
+        actions: [
+          CircleAvatar(
+            backgroundColor: Colors.black,
+            child: Text(
+              "c",
+              style: Theme.of(context)
+                  .textTheme
+                  .headline1!
+                  .copyWith(color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+          )
+        ],
       ),
       body: Hero(
           tag: "splashSrceen",
