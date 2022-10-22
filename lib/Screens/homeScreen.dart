@@ -16,6 +16,12 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       drawer: myDrawer(),
       appBar: AppBar(
+        title: Text("DOCTOR X",
+            style: Theme.of(context)
+                .textTheme
+                .headline1!
+                .copyWith(color: Colors.black, fontSize: 20)),
+        centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
         actions: [
@@ -32,10 +38,28 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: Hero(
-          tag: "splashSrceen",
-          child:
-              Image.asset("assets/images/splashphoto.jpg", fit: BoxFit.cover)),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Image.asset(
+                  "assets/images/splashphoto.jpg",
+                  width: 500,
+                  height: 400,
+                ),
+                Image.asset(
+                  "assets/images/splashphoto.jpg",
+                  width: 500,
+                  height: 400,
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     ));
   }
 }
