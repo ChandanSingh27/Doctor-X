@@ -8,7 +8,13 @@ class myDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-    
+          DrawerHeader(
+            child: UserAccountsDrawerHeader(
+            accountName: Text("chandan"),
+            currentAccountPicture: Image.asset("assets/images/splashphoto.jpg"), 
+            accountEmail: Text("cks9173@gmail.com"),
+            )
+          )
         ],
       ),
     );
